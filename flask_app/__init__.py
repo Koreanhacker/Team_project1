@@ -3,6 +3,13 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "https://sub.example.app"}})
+# 이 설정은 https://sub.example.app 인 origin을 허용합니다.
+
+@app.route("/api/users")
+def list_users():
+    return "All users have been returned."
+
 
 @app.route('/')
 def index():
