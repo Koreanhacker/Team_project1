@@ -13,7 +13,7 @@ def main():
     response = requests.post(url, json=data)
     
     # Flask 앱으로부터 예측 결과를 받아와 출력
-    # Flask 앱으로부터 예측 결과를 받아와 출력
+    # Flask 앱으로부터 예측 결과를 받아와 출력adfa
     if response.status_code == 200:
         result = response.json()
         prediction = result['prediction']
