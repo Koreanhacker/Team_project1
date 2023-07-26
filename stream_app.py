@@ -11,7 +11,8 @@ def main():
     url = 'http://localhost:5000/predict'
     data = {'input_value': input_value}
     response = requests.post(url, json=data)
-
+    
+    # Flask 앱으로부터 예측 결과를 받아와 출력
     # Flask 앱으로부터 예측 결과를 받아와 출력
     if response.status_code == 200:
         result = response.json()
