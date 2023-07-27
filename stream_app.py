@@ -8,7 +8,7 @@ def main():
     input_value = st.number_input("머신러닝 모델에 입력할 값: ", value=1.0)
 
     # Flask 앱으로 입력값을 전송
-    url = 'https://port-0-flask-deploy-cu6q2blkkexse9.sel4.cloudtype.app//predict'
+    url = 'https://port-0-flask-deploy-cu6q2blkkexse9.sel4.cloudtype.app'
     data = {'input_value': input_value}
     response = requests.post(url, json=data)
     
